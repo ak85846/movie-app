@@ -3,9 +3,9 @@ type property is used to tell redux what action should be taken*/
 
 
 {
-    type:'INCREASE_COUNT'
+    type:'ADD_MOVIES'
     /*YOU CAN SEND OTHER DATA WITH IT TOO
-    movies:[]
+    movies:[m1,m2,m3,m4]
     user:[]
     */
 }
