@@ -2,6 +2,7 @@ import React from 'react';
 import {data} from '../data'; 
 import Navbar from './Navbar';
 import MovieCard from './MovieCard';
+import {addMovies} from '../actions'
 import { type } from '@testing-library/user-event/dist/type';
 
 class App extends React.Component { 
@@ -16,17 +17,21 @@ class App extends React.Component {
     //make api call to get the movie
     //dispatch the action
     //but currently we are not making an api call so let's dispatch
+   /* instead of hard coding we will make a function and pass it to dispatch function
     store.dispatch({
       type: 'ADD_MOVIES',
       movies:data
     });
+    */
+    store.dispatch(addMovies(data));
+ 
 
     console.log('STATE',this.props.store.getState());
 
   }
   render(){
   const movies=this.props.store.getState();
-  consolelog('Render')
+  console.log('Render')
   return (
     <div className="App">
     <Navbar />
